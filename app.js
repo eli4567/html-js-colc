@@ -1,10 +1,10 @@
 ﻿function validateForm() {
 
-    var textboxPrice1 = document.body.textboxPrice1;
-    var textboxPrice2 = document.body.textboxPrice2;
-    var date1 = document.body.date1;
-    var date2 = document.body.date2;
-    var buttonPrice = document.body.buttonPrice;
+    var textboxPrice1 = document.getElementsByName("textboxPrice1")[0].value
+    var textboxPrice2 = document.getElementsByName("textboxPrice2")[0].value
+    var date1 = document.getElementsByName("date1")[0].value
+    var date2 = document.getElementsByName("date2")[0].value
+    //let buttonPrice = document.getElementsByName(buttonPrice;
     console.log(textboxPrice1);
     //add here the logic or export func form here
     //-------------------------------------------------
@@ -55,7 +55,7 @@
         //the same day no change
     }
     var days2 = 0;
-    console.log('days2 in priv month' + (getDaysInMonth(tempdate2.getFullYear(), tempdate2.getMonth()) - 15 + day2))
+    console.log('days2 in priv month' + (getDaysInMonth(tempdate2.getFullYear(), tempdate2.getMonth()) - 15 + day2));
 
     if (day2 < 15) {
         // if it's before the 15 it's by prv month
@@ -85,6 +85,19 @@
 
     //console before rendering
     console.log(textboxPrice1 + "refund ===>" + refund + 'refundfulldays' + refundfulldays);
-    //reder the data form the user and the logic 
+    //reder the data form the user and the logic
     //res.render('test1', { textboxPrice1, textboxPrice2, date1, date2, refundfulldays, month, refund, });
+
+    document.getElementsByName("price-before")[0].innerHTML += textboxPrice1;
+    document.getElementsByName("price-after")[0].innerHTML += textboxPrice2;
+    document.getElementsByName("price-jamp")[0].innerHTML += date1;
+    document.getElementsByName("package-changed")[0].innerHTML += date2;
+    document.getElementsByName("the-refund")[0].innerHTML += refund;
+    document.getElementsByName("refundfulldays")[0].innerHTML += refundfulldays;
+
+
+    return false;
+}
+function getDaysInMonth(year, month) {
+    return new Date(year, month, 0).getDate();
 }

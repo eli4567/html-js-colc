@@ -6,7 +6,7 @@
 <body>
 
 
-    <form name="myForm"onsubmit="return validateForm()" method="post">
+    <form name="myForm" onsubmit="return validateForm()">
         <input type="number" name="textboxPrice1" value="98" required="required" />
         <input type="number" name="textboxPrice2" value="33" required="required" />
         <input type="date" name="date1" value="2022-07-22" required="required" />
@@ -26,12 +26,13 @@
     </div>
     <div class="container">
         <div class="cord text-center">
-            <div class="cord">the price before the package change </div>
-            <div class="cord">the price after the package change  </div>
-            <div class="cord">the day the package price jamp  </div>
-            <div class="cord">the day the package changed  </div>
-            <div class="cord">the refund ==  </div>
-            <div class="cord">refundfulldays </div>
+            <div name="price-before" class="cord">the price before the package change </div>
+            <div name="price-after" class="cord">the price after the package change  </div>
+            <div name="price-jamp" class="cord">the day the package price jamp  </div>
+            <div name="package-changed" class="cord">the day the package changed  </div>
+            <div name="the-refund" class="cord">the refund ==  </div>
+            <div name="refundfulldays" class="cord">refundfulldays </div>
+
         </div>
     </div>
     <script src="app.js"></script>
