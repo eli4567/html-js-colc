@@ -88,12 +88,12 @@
     //reder the data form the user and the logic
     //res.render('test1', { textboxPrice1, textboxPrice2, date1, date2, refundfulldays, month, refund, });
 
-    document.getElementsByName("price-before")[0].innerHTML = "the price before the package change ="+textboxPrice1;
-    document.getElementsByName("price-after")[0].innerHTML = "the price after the package change  =" + textboxPrice2;
-    document.getElementsByName("price-jamp")[0].innerHTML = "the day the package price jamp ="+date1;
-    document.getElementsByName("package-changed")[0].innerHTML = "the day the package changed =" + date2;
-    document.getElementsByName("the-refund")[0].innerHTML = "the refund ==" + refund;
-    document.getElementsByName("refundfulldays")[0].innerHTML = "refundfulldays ==" + refundfulldays;
+    document.getElementsByName("price-before")[0].innerHTML = textboxPrice1;
+    document.getElementsByName("price-after")[0].innerHTML =  + textboxPrice2;
+    document.getElementsByName("price-jamp")[0].innerHTML = date1;
+    document.getElementsByName("package-changed")[0].innerHTML =date2;
+    document.getElementsByName("the-refund")[0].innerHTML =  refund;
+    document.getElementsByName("refundfulldays")[0].innerHTML =  refundfulldays;
 
 
     return false;
